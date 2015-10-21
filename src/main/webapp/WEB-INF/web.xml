@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
     <servlet>
-        <servlet-name>AnalysisServlet</servlet-name>
-        <servlet-class>net.thewalkingthread.tuglifeservices.AnalysisServlet</servlet-class>
+        <servlet-name>AnalysisBot</servlet-name>
+        <servlet-class>net.thewalkingthread.tuglifeservices.servlet.AnalysisBot</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>AnalysisServlet</servlet-name>
+        <servlet-name>AnalysisBot</servlet-name>
         <url-pattern>/analysis</url-pattern>
     </servlet-mapping>
 </web-app>
