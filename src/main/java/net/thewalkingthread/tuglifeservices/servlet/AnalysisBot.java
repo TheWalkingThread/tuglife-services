@@ -39,13 +39,13 @@ public class AnalysisBot extends HttpServlet {
             //param[0] = matnum, param[1] = password
             if (slackparams == null || slackparams.equals("")){
                 Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).info("No data for "+slackname+" found");
-                response.getWriter().print("No password found");
+                response.getWriter().print("No password found. Please specify mat.num and password");
                 return;
             }
             String[] param = slackparams.split(" ");
             if (param[0] == null || param[1] == null || param[0].equals("") || param[1].equals("")){
-                Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).info("No data for "+slackname+" found");
-                response.getWriter().print("No password found");
+                Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).info("Arguments can't be parsed");
+                response.getWriter().print("Internal error!");
                 return;
             }
             user = new MathUser(slackname, param[0], param[1]);
